@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de compras</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #000000;
+    }
+
+    li {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.3);
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>🛒 Lista de compras</h2>
+  <ul id="lista"></ul>
+
+  <script>
+    const items = [
+      "1 Café Colcafé clásico (500 g)",
+      "1 Vino blanco Segú Ollé",
+      "2 Dulce brevas Konfyt (250 g)",
+      "1 Mermelada diet piña (250 g)",
+      "1 Spaguetti integral Monticello (500 g)",
+      "1 Fettuccine Monticello (500 g)",
+      "1 Sal Refisal ligera en sodio(400 g)",
+      "2 Anillos de calamar (500 g)",
+      "3 Filete de salmón vitamar (empaque indiv)",
+      "2 Queso crema slight",
+      "1 Suero costeño",
+      "1 Queso parmesano Alpina (500 g)",
+      "2 Repuesto Pato discos activos lima",
+      "1 Barra chocolate Lyne clavos y canela",
+      "1 Paquete servilletas Familia green",
+      "1 Enjuague Colgate Plax sin alcohol",
+      "2 Maní Manitoba con sal (200 g)",
+      "1 Yogurt griego natural (1000 g)",
+      "3 Granola Riovalle Vainilla (1000 g)",
+      "14 Avena molida Aburrá (250 g)",
+      "1 Bolsa Jabón Rey + bicarbonato Dersa (500 g)",
+      "1 Barra jabón Dersa bicarbonato + manzana",
+      "12 rollos papel higiénico super blanko max gruesito",
+      "2 Vino Casillero del Diablo fantastic sweet"
+    ];
+
+    const lista = document.getElementById("lista");
+
+    items.forEach(item => {
+      const li = document.createElement("li");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+
+      li.appendChild(checkbox);
+      li.appendChild(document.createTextNode(item));
+
+      lista.appendChild(li);
+    });
+  </script>
+</body>
+</html>
